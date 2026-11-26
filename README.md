@@ -1,8 +1,6 @@
 # H One UI Showcase
 
-Empat komponen UI eksperimen untuk resort fiktif "H One": dashboard kaca, sidebar kaca, halaman masuk beranimasi, dan carousel hidangan yang berputar. Tiap komponen satu file React yang berdiri sendiri, ditampilkan di halaman terpisah.
-
-*English: four self-contained React UI experiments (glass dashboard, glass sidebar, animated sign-in, orbiting dish carousel) for a fictional resort, one page each, built with Vite. All data on screen is made up; nothing talks to a backend.*
+Four UI experiments for a fictional resort, "H One": a glass dashboard, a glass sidebar, an animated sign-in page, and a dish carousel that rotates in an orbit. Each component is one self-contained React file, shown on its own page. All data on screen is made up, and nothing talks to a backend.
 
 ![Glass dashboard](docs/images/glass-dashboard.png)
 
@@ -11,16 +9,16 @@ Empat komponen UI eksperimen untuk resort fiktif "H One": dashboard kaca, sideba
 | ![Glass sidebar](docs/images/glass-sidebar.png) | ![Sign-in animation](docs/images/sign-in-animation.png) |
 | ![Dish orbit carousel](docs/images/dish-orbit-carousel.png) | |
 
-## Komponen
+## Components
 
-| Halaman | File | Isi |
+| Page | File | Contents |
 |---|---|---|
-| `#/glass-dashboard` | `src/components/glass-dashboard.tsx` | Dashboard kaca: kartu angka, grafik batang, tabel aktivitas, dua bahasa, mode gelap |
-| `#/glass-sidebar` | `src/components/glass-sidebar.tsx` | Sidebar kaca dengan menu bersarang, pencarian, mode ringkas |
-| `#/sign-in-animation` | `src/components/sign-in-animation.tsx` | Halaman masuk beranimasi (tombol hanya tampilan, tidak ada autentikasi nyata) |
-| `#/dish-orbit-carousel` | `src/components/dish-orbit-carousel.tsx` | Carousel hidangan mengorbit, bisa di-scroll atau di-swipe (gambar berupa placeholder) |
+| `#/glass-dashboard` | `src/components/glass-dashboard.tsx` | Glass dashboard: number cards, a bar chart, an activity table, two languages, dark mode |
+| `#/glass-sidebar` | `src/components/glass-sidebar.tsx` | Glass sidebar with nested menus, search, and a compact mode |
+| `#/sign-in-animation` | `src/components/sign-in-animation.tsx` | Animated sign-in page (the buttons are for show; there is no real authentication) |
+| `#/dish-orbit-carousel` | `src/components/dish-orbit-carousel.tsx` | Orbiting dish carousel you can scroll or swipe (the images are placeholders) |
 
-## Menjalankan
+## Running it
 
 ```bash
 npm install
@@ -28,15 +26,15 @@ npm run dev      # http://localhost:5173
 npm run build
 ```
 
-Butuh Node 20 atau lebih baru. Stack: Vite, React 19, Tailwind v4, `lucide-react`. Router-nya satu fungsi berbasis hash di `src/main.tsx`.
+Needs Node 20 or newer. Stack: Vite, React 19, Tailwind v4, `lucide-react`. The router is a single hash-based function in `src/main.tsx`.
 
-## Catatan
+## Notes
 
-- Komponen dibuat dengan bantuan AI (vibe coding) dan **sengaja nyaris tidak diedit** di repo ini (perubahan: foto Unsplash diganti placeholder berwarna, dan tiga nilai opacity latar di CSS carousel dinaikkan atau diturunkan agar efek kaca terlihat), jadi belum diketik ketat: `src/components` dikeluarkan dari `npm run typecheck`. Rapikan tipenya dulu sebelum memakainya di proyek sungguhan.
-- Semua nama, angka, dan teks di layar fiktif.
-- Gambar hidangan di carousel adalah placeholder gradien yang dibuat di kode (SVG), bukan foto. Ganti `centeredDishUrl` dan `BACKDROP_WALL` dengan fotomu sendiri bila perlu. Satu-satunya sumber luar adalah font dari Google Fonts, yang dimuat saat halaman dibuka.
-- Lisensi MIT di bawah berlaku untuk seluruh isi repo.
+- The components were made with AI assistance (vibe coding) and are **left almost unedited** in this repo, so they are not strictly typed: `src/components` is excluded from `npm run typecheck`. Tidy up the types before using them in a real project. The only changes: the Unsplash photos were replaced with colored placeholders, and three background opacity values in the carousel CSS were raised or lowered so the glass effect shows.
+- Every name, number, and piece of text on screen is fictional.
+- The dish images in the carousel are gradient placeholders drawn in code (SVG), not photos. Replace `centeredDishUrl` and `BACKDROP_WALL` with your own photos if you like. The only outside resource is the Google Fonts stylesheet, loaded when a page opens.
+- The MIT license below covers everything in the repo.
 
-## Lisensi
+## License
 
-MIT. Lihat [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

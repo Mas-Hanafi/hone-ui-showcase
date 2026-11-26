@@ -4,12 +4,12 @@ import './index.css';
 
 type Demo = { title: string; note: string };
 
-// Judul dan catatan singkat tiap komponen; kuncinya nama file di src/components.
+// Title and short note per component; the key is the file name in src/components.
 const DEMOS: Record<string, Demo> = {
-  'glass-dashboard': { title: 'Glass dashboard', note: 'Dashboard kaca dengan kartu, grafik, dan tabel.' },
-  'glass-sidebar': { title: 'Glass sidebar', note: 'Sidebar kaca dengan menu bersarang.' },
-  'sign-in-animation': { title: 'Sign-in animation', note: 'Halaman masuk beranimasi.' },
-  'dish-orbit-carousel': { title: 'Dish orbit carousel', note: 'Carousel hidangan yang berputar mengorbit.' },
+  'glass-dashboard': { title: 'Glass dashboard', note: 'Glass dashboard with cards, a chart, and a table.' },
+  'glass-sidebar': { title: 'Glass sidebar', note: 'Glass sidebar with nested menus.' },
+  'sign-in-animation': { title: 'Sign-in animation', note: 'Animated sign-in page.' },
+  'dish-orbit-carousel': { title: 'Dish orbit carousel', note: 'Dish carousel that rotates in an orbit.' },
 };
 
 const loaders = import.meta.glob<{ default: ComponentType }>('./components/*.tsx');
@@ -21,7 +21,7 @@ function Index() {
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px', fontFamily: 'system-ui, sans-serif', color: '#1c1917' }}>
       <h1 style={{ fontSize: 28, margin: 0 }}>H One UI Showcase</h1>
-      <p style={{ color: '#57534e' }}>Komponen UI eksperimen untuk resort fiktif. Pilih satu untuk melihatnya berjalan.</p>
+      <p style={{ color: '#57534e' }}>UI experiments for a fictional resort. Pick one to see it running.</p>
       <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: 12 }}>
         {Object.entries(DEMOS).map(([key, d]) => (
           <li key={key}>
@@ -47,14 +47,14 @@ function App() {
   if (!Page) return <Index />;
   return (
     <>
-      <Suspense fallback={<p style={{ padding: 24, fontFamily: 'system-ui' }}>Memuat…</p>}>
+      <Suspense fallback={<p style={{ padding: 24, fontFamily: 'system-ui' }}>Loading…</p>}>
         <Page />
       </Suspense>
       <a
         href="#/"
         style={{ position: 'fixed', left: 12, bottom: 12, zIndex: 2147483647, padding: '8px 12px', borderRadius: 999, background: '#1c1917', color: '#fff', font: '600 13px system-ui', textDecoration: 'none' }}
       >
-        ← Semua komponen
+        ← All components
       </a>
     </>
   );
