@@ -2495,10 +2495,8 @@ export function GlassyDashboard({
         <header className="gd-top">
           <div className="gd-brand">
             <span className="gd-logo" aria-hidden="true">
-              <svg viewBox="0 0 28 28" fill="none">
-                <path d="m5 22 7.4-16h3.2L23 22h-4l-5-11.4L9 22H5Z" fill="currentColor" />
-                <path d="M10 18h8l1.4 3h-10.8l1.4-3Z" fill="currentColor" />
-              </svg>
+              {/* H'ONE mark, from the brand kit (hone-brand/hone-mark.svg) */}
+              <svg viewBox="-41.5 -18.3 300 300" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M157.2 5.2 L157.2 43.8 L157.8 44.5 L179.8 44.5 L184.8 43.5 L186.5 42.8 L187.8 42.8 L200.8 37.8 L201.5 37.0 L209.5 32.8 L214.8 28.8 L215.9 27.5 L215.9 5.0 L215.5 4.5 L158.0 4.5ZM0.8 4.5 L0.0 5.5 L0.0 258.2 L0.5 258.8 L70.2 258.8 L70.6 258.2 L70.6 157.5 L71.2 156.8 L156.8 156.8 L157.2 157.2 L157.2 258.6 L217.0 258.6 L217.0 81.5 L181.8 81.5 L180.5 82.0 L179.0 81.5 L157.8 81.5 L157.2 82.2 L157.2 99.8 L156.8 100.2 L71.2 100.2 L70.5 99.2 L70.5 5.0 L70.0 4.5Z" /></svg>
             </span>
             <div>
               <strong>{workspaceName}</strong>

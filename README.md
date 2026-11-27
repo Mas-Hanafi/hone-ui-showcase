@@ -1,3 +1,10 @@
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/hone-wordmark-white.svg">
+    <img src="docs/brand/hone-wordmark-black.svg" alt="H'ONE" height="48">
+  </picture>
+</p>
+
 # H One UI Showcase
 
 Four UI experiments for a fictional resort, "H One": a glass dashboard, a glass sidebar, an animated sign-in page, and a dish carousel that rotates in an orbit. Each component is one self-contained React file, shown on its own page. All data on screen is made up, and nothing talks to a backend.
@@ -33,8 +40,8 @@ Needs Node 20 or newer. Stack: Vite, React 19, Tailwind v4, `lucide-react`. The 
 - The components were made with AI assistance (vibe coding) and are **left almost unedited** in this repo, so they are not strictly typed: `src/components` is excluded from `npm run typecheck`. Tidy up the types before using them in a real project. The only changes: the Unsplash photos were replaced with colored placeholders, and three background opacity values in the carousel CSS were raised or lowered so the glass effect shows.
 - Every name, number, and piece of text on screen is fictional.
 - The dish images in the carousel are gradient placeholders drawn in code (SVG), not photos. Replace `centeredDishUrl` and `BACKDROP_WALL` with your own photos if you like. The only outside resource is the Google Fonts stylesheet, loaded when a page opens.
-- The MIT license below covers everything in the repo.
+- The MIT license below covers the code. The H'ONE name and logo are the project's brand identity and are not covered by it; forks should use their own.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Code: MIT. See [LICENSE](LICENSE). The H'ONE name and logo are excluded.
