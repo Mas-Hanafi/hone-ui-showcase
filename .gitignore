@@ -2,3 +2,6 @@ node_modules
 dist
 *.local
 _pending/
+
+.vercel
+.env*
