@@ -149,11 +149,11 @@ function FacebookIcon({ className = "h-4 w-4" }) {
   )
 }
 
-/** Animated geometric H One glass monogram mark */
+/** Animated glass tile carrying the H'ONE mark */
 function HOneMark({ darkMode, className = "hone-mark hone-rise" }) {
   return (
     <div className="hone-mark-wrap hone-rise">
-      <svg className={className} viewBox="0 0 48 48" aria-label="H One">
+      <svg className={className} viewBox="0 0 48 48" aria-label="H'ONE">
         <rect
           className="hone-mark-bg"
           width="48"
@@ -163,29 +163,12 @@ function HOneMark({ darkMode, className = "hone-mark hone-rise" }) {
           stroke={darkMode ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.5)"}
           strokeWidth="1.2"
         />
-        <g className="hone-mark-glyph" fill="#FAFAFA">
-          <rect x="11.5" y="13" width="4.4" height="22" rx="2.2" />
-          <rect x="23.2" y="13" width="4.4" height="22" rx="2.2" />
-          <rect x="14.5" y="21.8" width="10.2" height="4.2" rx="2" />
-          <path
-            d="M34.2 13C35.4 13 36.4 14 36.4 15.2V32.8C36.4 34 35.4 35 34.2 35C33 35 32 34 32 32.8V18.3L30.5 19.3C29.8 19.8 28.9 19.4 28.9 18.6V17.4C28.9 16.9 29.1 16.5 29.5 16.2L32.9 13.4C33.3 13.1 33.7 13 34.2 13Z"
-            fill="url(#hone-mark-accent)"
-          />
+        {/* H'ONE mark, from the brand kit (hone-brand/hone-mark.svg) */}
+        <g className="hone-mark-glyph">
+          <svg x="8" y="8" width="32" height="32" viewBox="-41.5 -18.3 300 300" fill="#FAFAFA" aria-hidden="true">
+            <path fillRule="evenodd" d="M157.2 5.2 L157.2 43.8 L157.8 44.5 L179.8 44.5 L184.8 43.5 L186.5 42.8 L187.8 42.8 L200.8 37.8 L201.5 37.0 L209.5 32.8 L214.8 28.8 L215.9 27.5 L215.9 5.0 L215.5 4.5 L158.0 4.5ZM0.8 4.5 L0.0 5.5 L0.0 258.2 L0.5 258.8 L70.2 258.8 L70.6 258.2 L70.6 157.5 L71.2 156.8 L156.8 156.8 L157.2 157.2 L157.2 258.6 L217.0 258.6 L217.0 81.5 L181.8 81.5 L180.5 82.0 L179.0 81.5 L157.8 81.5 L157.2 82.2 L157.2 99.8 L156.8 100.2 L71.2 100.2 L70.5 99.2 L70.5 5.0 L70.0 4.5Z" />
+          </svg>
         </g>
-        <defs>
-          <linearGradient
-            id="hone-mark-accent"
-            x1="29"
-            y1="13"
-            x2="37"
-            y2="35"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#02EEFF" />
-            <stop offset="0.6" stopColor="#7FA0FF" />
-            <stop offset="1" stopColor="#4B64BF" />
-          </linearGradient>
-        </defs>
       </svg>
     </div>
   )
